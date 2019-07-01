@@ -103,5 +103,3 @@ for new, orig in zip(out_new.top5_classes, out_orig.top5_classes):
 print("Top 5 class probs: {}".format(['%.5f' % elem for elem in out_new.top5_probs]))
 print("For class indices: {}".format(out_new.top5_indices))
 print("With labels {}".format(out_new.top5_classes))
-
-

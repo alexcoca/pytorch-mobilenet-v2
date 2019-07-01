@@ -1,10 +1,8 @@
+import torch
 from copy import deepcopy
 from models.mobile_net import MobileNetV2
-from utils.model_utils import load_weights
-import torch
-
-from utils.model_utils import load_weights
 from utils.data_utils import classify_img, load_img, preprocess_img
+from utils.model_utils import load_weights
 
 # Constants
 EPS = 0.001 # For numerical stability when dividing by sqrt(variance) in batch norm

@@ -64,7 +64,7 @@ def create_new_state_dict(layer, state_dict):
     # Remove batch norm state
     for value in names.values():
         del new_state_dict[value]
-    del new_state_dict['features.0.0.weight']
+    del new_state_dict[layer + '.weight']
     # Compute scaled weights and biases
     layer_new_state = scale_weights(layer, state_dict)
     new_state_dict[layer + '.weight'] = layer_new_state['scaled_weights']
